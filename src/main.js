@@ -4,29 +4,12 @@ import Vue from "vue";
 import App from "./App";
 import VueRouter from "vue-router";
 import { Auth } from "./auth";
+import router from "./router";
 
 Vue.config.productionTip = false;
 
 Vue.use(VueRouter);
 Vue.prototype.$auth = new Auth();
-
-const router = new VueRouter({
-  mode: "history",
-  routes: [
-    {
-      path: "/sign_in",
-      name: "sign_in",
-      component: require("./components/SignIn.vue")
-    },
-    {
-      path: "/profile",
-      name: "profile",
-      component: require("./components/ProfilePage.vue")
-    },
-    { path: "/register", name: "register" },
-    { path: "/sign_out", name: "sign_out" }
-  ]
-});
 
 /* eslint-disable no-new */
 new Vue({

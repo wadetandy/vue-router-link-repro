@@ -27,5 +27,6 @@ export default {
 }
 ul {
   list-style: none;
+  padding-inline-start: 0;
 }
 </style>
